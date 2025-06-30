@@ -8,9 +8,7 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
-
-// ❗ Dynamically import Education (Lottie uses `document`)
-const Education = dynamic(() => import("./components/homepage/education"), { ssr: false });
+import Education from "./components/client/education-wrapper";
 
 async function getData() {
   const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`);
